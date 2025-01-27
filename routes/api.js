@@ -282,8 +282,8 @@ router.get('/api/dowloader/telesticker', cekKey, async (req, res, next) => {
 	var url = req.query.url
 	if (!url) return res.json({ status: false, creator: `${creator}`, message: "[!] enter url parameter!" })
 	alip.xvideosdl(url).then(data => {
-		limitapikey(req.query.apikey)
 		if (!data) return res.json({ status: false, creator: creator, message: "[!] data tidak ditemukan" })
+		limitapikey(req.query.apikey)
 		res.json({
 			status: true,
 			creator: `${creator}`,
