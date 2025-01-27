@@ -25,8 +25,7 @@ LimitApikey = 200 // Limit Apikey default
 
 //___________ ┏  Database Mongodb Setting  ┓ ___________\\
 
-keymongodb = process.env.mongodb  "mongodb+srv://zanssxploit:pISqUYgJJDfnLW9b@cluster0.fgram.mongodb.net/?retryWrites=true&w=majority";
-
+keymongodb = "mongodb+srv://zanssxploit:pISqUYgJJDfnLW9b@cluster0.fgram.mongodb.net/?retryWrites=true&w=majority"
 //___________ ┏  SMTP Setting  ┓ ___________\\
 
 //note service SMTP Gmail Tidak Boleh Send Kat Temp Email Kalau mahu pakai temp email buat di service lain
