@@ -293,9 +293,22 @@ router.get('/api/dowloader/telesticker', cekKey, async (req, res, next) => {
 		.catch(e => {
 			res.json(loghandler.error)
 		})
-})
-			 
-
+		
+		router.get('/search/xnxxsearch', async (req, res, next) => {
+	var text1 = req.query.query
+	if (!text1) return res.json({ status: false, creator: `${creator}`, message: "[!] enter query parameter!" })
+	alip.xnxxSearch(text1).then((data) => {
+		if (!data) return res.json(loghandler.notfound)
+		var result = data.result
+		limitapikey(req.query.apikey)
+		res.json({
+			status: true,
+			creator: `${creator}`,
+			result: result
+		})
+	}).catch((err) => {
+		res.sendFile(error)
+	})
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Text Pro  ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
 
 router.get('/api/textpro/pencil', cekKey, async (req, res, next) => {
