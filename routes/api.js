@@ -278,7 +278,8 @@ router.get('/api/dowloader/telesticker', cekKey, async (req, res, next) => {
          .catch(e => {
 	 res.json(loghandler.error)
 })
-})router.get('/downloader/xvideosdl', async (req, res, next) => {
+})
+	router.get('/downloader/xvideosdl', async (req, res, next) => {
 	var url = req.query.url
 	if (!url) return res.json({ status: false, creator: `${creator}`, message: "[!] enter url parameter!" })
 	alip.xvideosdl(url).then(data => {
