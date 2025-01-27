@@ -286,7 +286,6 @@ router.get('/api/dowloader/telesticker', cekKey, async (req, res, next) => {
 	alip.xnxxSearch(text1).then((data) => {
 		if (!data) return res.json(loghandler.notfound)
 		var result = data.result
-		limitapikey(req.query.apikey)
 		res.json({
 			status: true,
 			creator: `${creator}`,
