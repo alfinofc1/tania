@@ -279,22 +279,7 @@ router.get('/api/dowloader/telesticker', cekKey, async (req, res, next) => {
 	 res.json(loghandler.error)
 })
 })
-	router.get('/downloader/xvideosdl', async (req, res, next) => {
-	var url = req.query.url
-	if (!url) return res.json({ status: false, creator: `${creator}`, message: "[!] enter url parameter!" })
-	alip.xvideosdl(url).then(data => {
-		if (!data) return res.json({ status: false, creator: creator, message: "[!] data tidak ditemukan" })
-		limitapikey(req.query.apikey)
-		res.json({
-			status: true,
-			creator: `${creator}`,
-			result: data
-		})
-	})
-		.catch(e => {
-			res.json(loghandler.error)
-		})
-		
+	
 		router.get('/search/xnxxsearch', async (req, res, next) => {
 	var text1 = req.query.query
 	if (!text1) return res.json({ status: false, creator: `${creator}`, message: "[!] enter query parameter!" })
