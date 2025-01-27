@@ -114,7 +114,7 @@ module.exports.sendResetEmail = async (email, token) => {
               <tr>
                 <td align="center" valign="top" style="padding: 36px 24px;">
                   <a href="https://${domain}" target="_blank" style="display: inline-block;">
-                    <img src="https://telegra.ph/file/f492065d44c897cd3836e.png" alt="Logo" border="0" width="100" style="display: block; width: 100px; max-width: 100px; min-width: 100px;">
+                    <img src="https://img102.pixhost.to/images/273/559560632_wanzofc.jpg" alt="Logo" border="0" width="100" style="display: block; width: 100px; max-width: 100px; min-width: 100px;">
                   </a>
                 </td>
               </tr>
@@ -169,7 +169,7 @@ module.exports.sendResetEmail = async (email, token) => {
 
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                  <p style="margin: 0;">Aliff,<br> ${domain}</p>
+                  <p style="margin: 0;">WANZOFC,<br> ${domain}</p>
                 </td>
               </tr>
     
@@ -315,7 +315,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
               <tr>
                 <td align="center" valign="top" style="padding: 36px 24px;">
                   <a href="https://${domain}" target="_blank" style="display: inline-block;">
-                  <img src="https://telegra.ph/file/f492065d44c897cd3836e.png" alt="Logo" border="0" width="100" style="display: block; width: 100px; max-width: 100px; min-width: 100px;">
+                  <img src="https://img102.pixhost.to/images/273/559560632_wanzofc.jpg" alt="Logo" border="0" width="100" style="display: block; width: 100px; max-width: 100px; min-width: 100px;">
                   </a>
                 </td>
               </tr>
@@ -344,7 +344,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
     
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                  <p style="margin: 0;">Terima kasih kerana guna rest api alpis, Sila tekan button di bawah untuk sahkan akaun anda.</p>
+                  <p style="margin: 0;">Terima kasih kerana guna rest api wanzofc, silakan tekan button di bawah untuk sahkan akaun anda.</p>
                 </td>
               </tr>
 
@@ -369,7 +369,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
 
               <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-                  <p style="margin: 0;">Aliff,<br> ${domain}</p>
+                  <p style="margin: 0;">WANZOFC,<br> ${domain}</p>
                 </td>
               </tr>
     
@@ -385,7 +385,7 @@ module.exports.sendVerifyEmail = async (email, token) => {
     
               <tr>
                 <td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;">
-                  <p style="margin: 0;">Anda menerima e-mel ini kerana kami menerima permintaan untuk pengesahan akaun untuk akaun anda. Jika anda tidak meminta pengesahan akaun anda boleh memadamkan e-mel ini dengan selamat.</p>
+                  <p style="margin: 0;">anda menerima gmail ini kerana kami menerima permintaan untuk pengesahan akaun untuk akaun anda. Jika anda tidak meminta pengesahan akaun anda boleh memadamkan Gmail ini dengan selamat.</p>
                 </td>
               </tr>
     
