@@ -92,6 +92,40 @@ alip.fbdown(url).then(data => {
 })
 })
 
+router.get('/api/ai/dukun', cekKey, (req, res, next) => {
+    const url = req.query.url;
+    if (!url) {
+        return res.json({
+            status: false,
+            creator: `${creator}`,
+            message: '[!] masukan parameter url',
+        });
+    }
+    axios.get(`https://api.siputzx.my.id/api/ai/dukun?content=${encodeURIComponent(url)}`)
+        .then(response => {
+            const data = response.data;
+             if (data && data.status === true && data.result) {
+                limitapikey(req.query.apikey);
+                res.json({
+                    status: true,
+                    creator: `${creator}`,
+                    result: data.result,
+                });
+            } else {
+                res.json({
+                    status: false,
+                    creator: `${creator}`,
+                    message: "Gagal mengambil data dari API Dukun atau data tidak sesuai format",
+                });
+             }
+
+        })
+        .catch(error => {
+            console.error("Error saat memanggil API Dukun:", error);
+            res.json(loghandler.error);
+        });
+});
+
 router.get('/api/dowloader/twitter', cekKey, async (req, res, next) => {
 	var url = req.query.url
 	if (!url ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter url"})   
