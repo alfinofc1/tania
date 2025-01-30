@@ -92,20 +92,22 @@ alip.fbdown(url).then(data => {
 })
 })
 
-router.get('/api/ai/dukun', cekKey, (req, res, next) => {
-    const url = req.query.url;
-    if (!url) {
+router.post('/api/ai/dukun', cekKey, (req, res, next) => {  // <-- Ganti GET menjadi POST
+    const content = req.body.content; // <-- Ambil data dari body request
+
+    if (!content) {
         return res.json({
             status: false,
             creator: `${creator}`,
-            message: '[!] masukan parameter url',
+            message: '[!] masukan data content di body request', // <-- Pesan error diubah
         });
     }
-    axios.get(`https://api.siputzx.my.id/api/ai/dukun?content=${encodeURIComponent(url)}`)
+
+    axios.get(`https://api.siputzx.my.id/api/ai/dukun?content=${encodeURIComponent(content)}`) // <-- Gunakan content dari body
         .then(response => {
             const data = response.data;
-             if (data && data.status === true && data.result) {
-                limitapikey(req.query.apikey);
+            if (data && data.status === true && data.result) {
+                limitapikey(req.body.apikey); // <-- Ambil apikey dari body request jika diperlukan
                 res.json({
                     status: true,
                     creator: `${creator}`,
@@ -117,7 +119,7 @@ router.get('/api/ai/dukun', cekKey, (req, res, next) => {
                     creator: `${creator}`,
                     message: "Gagal mengambil data dari API Dukun atau data tidak sesuai format",
                 });
-             }
+            }
 
         })
         .catch(error => {
