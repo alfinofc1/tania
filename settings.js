@@ -34,7 +34,7 @@ servicesmtp = 'Gmail'//Ada gmail ada sendinblue ikut masing2 limit gmail 500 lim
 sendemail = 'berlianawan498@gmail.com' //Email SMTP
 fromsendemail = 'berlianawan498@gmail.com' // From Email SMTP *kalau takde custom email kena sama email dengan Email SMTP
 sendpwmail = "olre djtq lzyu oaxg"
-	domain = 'gemini.wanzofc.us.kg'// domain website tanpa http or https
+	domain = 'alfinapi.netlify.app/'// domain website tanpa http or https
 
 //_______________________ ┏  Apikey  ┓ _______________________\\
 
